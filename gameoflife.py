@@ -9,11 +9,10 @@ from math import sqrt
 Main logic of the application
 """
 class Board(object):
-	"""
-	Class representing the board of the world where the simulation takes place
-	
-	It includes all of the game logic, including creation and death of cells as well as subsequent generations
-	"""
+    """
+    Class representing the board of the world where the simulation takes place
+    It includes all of the game logic, including creation and death of cells as well as subsequent generations
+    """
 
     neighbour_places = [(-1, -1), (-1, 0), (-1, 1), (0, -1),
                     (0, 1), (1, -1), (1, 0), (1, 1)]
@@ -52,7 +51,7 @@ class Board(object):
 
 
 class Hexa_Board(object):
-	"""Class representing the hexagonal version of the simulation"""
+    """Class representing the hexagonal version of the simulation"""
     neighbour_places_odd = [(-1, 0), (-1, 1), (0, -1),
                     (0, 1), (1, 0), (1, 1)]
     neighbour_places_even = [(-1, -1), (-1, 0), (0, -1),
@@ -108,7 +107,7 @@ class Hexa_Board(object):
 
 
 class Game(object):
-	"""The main class of the game including the main GUI components"""
+    """The main class of the game including the main GUI components"""
     def __init__(self):
 
         self.tk = Tk()
@@ -207,7 +206,7 @@ class Game(object):
         self.board.pack()
 
 class Draw(Frame):
-	"""Class representing one instance of the simulation as well as the GUI components for controlling it"""
+    """Class representing one instance of the simulation as well as the GUI components for controlling it"""
     def __init__(self, field, root):
         Frame.__init__(self, root)
         self.field=field
